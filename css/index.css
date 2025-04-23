@@ -100,13 +100,25 @@ label {
   display: block;
 }
 
+
 input {
+  outline: none;
   width: 75%;
   display: inline-block;
+  font-family: inherit;
   font-size: 100%;
   padding: 0.5rem;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 2px solid #E5E7EB;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+.form-field input:focus {
+  border: 2px solid blue;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .form-row {
@@ -129,6 +141,15 @@ input {
   font-weight: bold;
   border: none;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#create-account-button:hover {
+  background-color: #799462;
+}
+
+#create-account-button:focus {
+  opacity: 0.7;
 }
 
 #log-in-reminder {
@@ -139,5 +160,9 @@ input {
   color: #596D48;
   text-decoration: none;
   font-weight: bold;
+}
+
+.log-in:hover {
+  text-decoration: underline;
 }
 
